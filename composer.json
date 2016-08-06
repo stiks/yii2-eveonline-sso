@@ -1,0 +1,21 @@
+{
+    "name": "stiks/yii2-eveonline-sso",
+    "description": "OAuth2 client for EveOnline SSO",
+    "require": {
+        "yiisoft/yii2": "~2.0",
+        "yiisoft/yii2-authclient": "~2.0",
+        "php": ">=5.4"
+    },
+    "license": "CC BY-SA",
+    "authors": [
+        {
+            "name": "stiks",
+            "email": "dev@yn.ee"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "stiks\\eveonline_sso\\": "" }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable" : true
+}
