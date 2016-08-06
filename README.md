@@ -4,7 +4,7 @@ This extension uses standart `yii2-authclient` to allow auth via EveOnline site.
 
 ## Dependencies
 
-The only required package is `yiisoft/yii2-authclient`
+The only required package is `yiisoft/yii2-authclient` version "2.1+"
 
 ## Installation
 

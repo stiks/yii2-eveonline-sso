@@ -4,12 +4,11 @@ namespace stiks\eveonline_sso;
 use yii\authclient\OAuth2;
 
 class EveOnlineSSO extends OAuth2 {
-    public $id = 'eve-online-sso';
-
+    # enable state check
     public $validateAuthState = true;
 
-    public $authUrl = 'https://login.eveonline.com/oauth/authorize';
-    public $tokenUrl = 'https://login.eveonline.com/oauth/token';
+    public $authUrl    = 'https://login.eveonline.com/oauth/authorize';
+    public $tokenUrl   = 'https://login.eveonline.com/oauth/token';
     public $apiBaseUrl = 'https://login.eveonline.com/oauth';
 
     public function initUserAttributes() {
