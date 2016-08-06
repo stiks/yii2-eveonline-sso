@@ -1,6 +1,6 @@
 # Yii2 EveOnline SSO OAuth2 client extension
 
-This extension uses standart `yii2-authclient` to allow auth via EveOnline site.
+This extension uses standart `yii2-authclient` to allow auth via EveOnline site. Based on `unti1x/yii2-eveonline-sso`
 
 ## Dependencies
 
@@ -26,24 +26,24 @@ composer require "stiks/yii2-eveonline-sso" "dev-master"
 Configuration, config/web.php:
 
 ```php
-    'components' => [
+'components' => [
 
-        # ...
+    # ...
 
-        'authClientCollection' => [
-            'class' => 'yii\authclient\Collection',
-            'clients' => [
-                'eve-online-sso' => [
-                    'class' => 'stiks\eveonline_sso\EveOnlineSSO',
-                    'clientId' => 'Your Client ID',
-                    'clientSecret' => 'Your Client Secret',
-                ],
+    'authClientCollection' => [
+        'class' => 'yii\authclient\Collection',
+        'clients' => [
+            'eve-online-sso' => [
+                'class' => 'stiks\eveonline_sso\EveOnlineSSO',
+                'clientId' => 'Your Client ID',
+                'clientSecret' => 'Your Client Secret',
             ],
-        ]
-
-        // ...
-
+        ],
     ]
+
+    # ...
+
+]
 
 ```
 
