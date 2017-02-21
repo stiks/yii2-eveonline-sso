@@ -37,6 +37,10 @@ Configuration, config/web.php:
                 'class' => 'stiks\eveonline_sso\EveOnlineSSO',
                 'clientId' => 'Your Client ID',
                 'clientSecret' => 'Your Client Secret',
+                'scope' => [
+                    # your scope here
+                    'characterAccountRead'
+                ]
             ],
         ],
     ]
@@ -117,6 +121,22 @@ Example code for views:
     <?= Yii::$app->user->identity->character_name ?>
 <?php endif; ?>
 
+```
+
+You can also use inbuild widgit:
+
+```php
+<?php
+use yii\authclient\widgets\AuthChoice
+?>
+
+<?php
+$authAuthChoice = AuthChoice::begin (['id' => 'auth-choice', 'baseAuthUrl' => ['ccp/auth'], 'popupMode' => true]);
+    foreach ($authAuthChoice->getClients () as $client) {
+        echo $authAuthChoice->clientLink ($client, Yii::t ('app', 'Sign in with '.$client->getTitle ()), ['class' => 'btn btn-block btn-default']);
+    }
+AuthChoice::end();
+?>
 ```
 
 ## Links
